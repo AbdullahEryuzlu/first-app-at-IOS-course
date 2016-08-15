@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperCool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,120 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redIcon" translatesAutoresizingMaskIntoConstraints="NO" id="amK-SY-y6m" userLabel="red">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EKo-2d-P2P"/>
+                                    <constraint firstAttribute="width" constant="100" id="JtN-y7-RNZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EKo-2d-P2P"/>
+                                        <exclude reference="JtN-y7-RNZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="EKo-2d-P2P"/>
+                                        <include reference="JtN-y7-RNZ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ghJ-Lm-5NT" userLabel="blue">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="PPv-R3-diH"/>
+                                    <constraint firstAttribute="height" constant="100" id="ubx-aQ-LG7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PPv-R3-diH"/>
+                                        <exclude reference="ubx-aQ-LG7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="PPv-R3-diH"/>
+                                        <include reference="ubx-aQ-LG7"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBn-me-CP4" userLabel="redButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Hide Red Button!"/>
+                                <connections>
+                                    <action selector="redButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hh-GH-1kt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVq-nN-VGs" userLabel="blueButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Hide Blue Button"/>
+                                <connections>
+                                    <action selector="blueButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8z-t3-3Yw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TVq-nN-VGs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Ee-1R-YPl"/>
+                            <constraint firstItem="CBn-me-CP4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5RP-Yc-8Mx"/>
+                            <constraint firstItem="amK-SY-y6m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="Hdw-9q-TQb"/>
+                            <constraint firstItem="CBn-me-CP4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="JXM-Mk-o2H"/>
+                            <constraint firstItem="ghJ-Lm-5NT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="UkW-od-Hh8"/>
+                            <constraint firstItem="amK-SY-y6m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100" id="c8z-YX-L0V"/>
+                            <constraint firstItem="ghJ-Lm-5NT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="rQn-yW-GBM"/>
+                            <constraint firstItem="TVq-nN-VGs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ygh-my-s3I"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="amK-SY-y6m"/>
+                                <exclude reference="ghJ-Lm-5NT"/>
+                                <exclude reference="CBn-me-CP4"/>
+                                <exclude reference="TVq-nN-VGs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5RP-Yc-8Mx"/>
+                                <exclude reference="JXM-Mk-o2H"/>
+                                <exclude reference="0Ee-1R-YPl"/>
+                                <exclude reference="ygh-my-s3I"/>
+                                <exclude reference="Hdw-9q-TQb"/>
+                                <exclude reference="c8z-YX-L0V"/>
+                                <exclude reference="UkW-od-Hh8"/>
+                                <exclude reference="rQn-yW-GBM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="amK-SY-y6m"/>
+                                <include reference="ghJ-Lm-5NT"/>
+                                <include reference="CBn-me-CP4"/>
+                                <include reference="TVq-nN-VGs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5RP-Yc-8Mx"/>
+                                <include reference="JXM-Mk-o2H"/>
+                                <include reference="0Ee-1R-YPl"/>
+                                <include reference="ygh-my-s3I"/>
+                                <include reference="Hdw-9q-TQb"/>
+                                <include reference="c8z-YX-L0V"/>
+                                <include reference="UkW-od-Hh8"/>
+                                <include reference="rQn-yW-GBM"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="blueButton" destination="ghJ-Lm-5NT" id="5gw-1t-CJg"/>
+                        <outlet property="redButton" destination="amK-SY-y6m" id="Akg-Xn-EVl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1102.5" y="309"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blueIcon" width="85" height="85"/>
+        <image name="redIcon" width="85" height="85"/>
+    </resources>
 </document>

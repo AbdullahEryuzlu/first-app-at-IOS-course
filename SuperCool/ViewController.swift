@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var blueButton: UIImageView!
+    @IBOutlet weak var redButton: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +22,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func blueButtonTapped(sender: UIButton) {
+        blueButton.hidden = true
+        redButton.hidden = false
+    }
+    @IBAction func redButtonTapped(sender: UIButton) {
+        redButton.hidden = true
+        blueButton.hidden = false
+    }
+   
 }
 
